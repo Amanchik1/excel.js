@@ -1,0 +1,43 @@
+@import "variables";
+@import "mixins";
+
+
+.excel__header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 4px;
+  align-items: center;
+  //test
+  //background: rgba(225, 42, 37, 0.39);
+
+  & .new-table{
+    margin: 0;
+    font-size: 18px;
+    font-variant-ligatures: no-contextual;
+    height: 20px;
+    line-height: 22px;
+    min-width: 1px;
+    padding: 2px 7px;
+    color: #000;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    outline: none;
+
+    &:hover{
+      border: 1px solid $border-color;
+    }
+    &:focus{
+      border: 2px solid #005ccc;
+    }
+  }
+
+  & .button{
+    @include button(red)
+  }
+
+}
